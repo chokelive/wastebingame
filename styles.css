@@ -387,7 +387,21 @@ h2 {
 
   .scoreboard {
     min-width: 0;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .scoreboard div {
+    padding: 8px;
+  }
+
+  .scoreboard span {
+    font-size: 22px;
+  }
+
+  .scoreboard small {
+    font-size: 12px;
   }
 
   .waste-panel {
