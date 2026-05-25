@@ -1,5 +1,5 @@
 ﻿{
-    "generatedAt":  "2026-05-25T09:06:01",
+    "generatedAt":  "2026-05-25T15:16:37",
     "categories":  [
                        {
                            "name":  "Opaque",
@@ -48,6 +48,14 @@
                                              "path":  "West/Plastic/coco-350-e1659501926635.png"
                                          },
                                          {
+                                             "name":  "glass1",
+                                             "path":  "West/Plastic/glass1.png"
+                                         },
+                                         {
+                                             "name":  "glass2",
+                                             "path":  "West/Plastic/glass2.png"
+                                         },
+                                         {
                                              "name":  "Image - 2025-11-20T163346.596",
                                              "path":  "West/Plastic/Image - 2025-11-20T163346.596.jpg"
                                          },
@@ -70,8 +78,8 @@
                                              "path":  "West/Water_Ice/Ice .png"
                                          },
                                          {
-                                             "name":  "น้ำแข็ง",
-                                             "path":  "West/Water_Ice/น้ำแข็ง.jpg"
+                                             "name":  "Ice2",
+                                             "path":  "West/Water_Ice/Ice2.jpg"
                                          }
                                      ]
                        },
@@ -79,7 +87,22 @@
                            "name":  "Oganic West",
                            "binImage":  "Bin/Oganic West.jpg",
                            "items":  [
-
+                                         {
+                                             "name":  "oga1",
+                                             "path":  "West/Oganic West/oga1.jpg"
+                                         },
+                                         {
+                                             "name":  "oga2",
+                                             "path":  "West/Oganic West/oga2.jpg"
+                                         },
+                                         {
+                                             "name":  "oga3",
+                                             "path":  "West/Oganic West/oga3.jpg"
+                                         },
+                                         {
+                                             "name":  "oga4",
+                                             "path":  "West/Oganic West/oga4.jpg"
+                                         }
                                      ]
                        },
                        {
@@ -91,16 +114,40 @@
                                              "path":  "West/Can/425038-02-allonline-sm.jpg"
                                          },
                                          {
-                                             "name":  "8850250000365_1-20250807100722-",
-                                             "path":  "West/Can/8850250000365_1-20250807100722-.webp"
-                                         },
-                                         {
                                              "name":  "8850999016887_1",
                                              "path":  "West/Can/8850999016887_1.jpg"
                                          },
                                          {
                                              "name":  "8850999023175_1-20240710103508-",
                                              "path":  "West/Can/8850999023175_1-20240710103508-.webp"
+                                         },
+                                         {
+                                             "name":  "can1",
+                                             "path":  "West/Can/can1.png"
+                                         },
+                                         {
+                                             "name":  "can2",
+                                             "path":  "West/Can/can2.jpg"
+                                         },
+                                         {
+                                             "name":  "can3",
+                                             "path":  "West/Can/can3.jpg"
+                                         },
+                                         {
+                                             "name":  "can5",
+                                             "path":  "West/Can/can5.jpg"
+                                         },
+                                         {
+                                             "name":  "can6",
+                                             "path":  "West/Can/can6.jpg"
+                                         },
+                                         {
+                                             "name":  "can7",
+                                             "path":  "West/Can/can7.png"
+                                         },
+                                         {
+                                             "name":  "can8",
+                                             "path":  "West/Can/can8.jpg"
                                          },
                                          {
                                              "name":  "Coffee berby",
@@ -129,8 +176,20 @@
                                              "path":  "West/General West/a7fb7393-5357a582b8e3c53b5d066b887135ac3d-18bf055a.jpeg"
                                          },
                                          {
+                                             "name":  "fome",
+                                             "path":  "West/General West/fome.jpg"
+                                         },
+                                         {
+                                             "name":  "poothai",
+                                             "path":  "West/General West/poothai.jpg"
+                                         },
+                                         {
                                              "name":  "Screenshot 2025-11-18 142240",
                                              "path":  "West/General West/Screenshot 2025-11-18 142240.png"
+                                         },
+                                         {
+                                             "name":  "SPC PRODUCT",
+                                             "path":  "West/General West/SPC PRODUCT.jpg"
                                          }
                                      ]
                        },
@@ -161,6 +220,26 @@
                                          {
                                              "name":  "8d4decfe21ae01e8f4f5dc05b09084fd",
                                              "path":  "West/Glass Bottle/8d4decfe21ae01e8f4f5dc05b09084fd.jpg"
+                                         },
+                                         {
+                                             "name":  "bottle1",
+                                             "path":  "West/Glass Bottle/bottle1.png"
+                                         },
+                                         {
+                                             "name":  "cevid2",
+                                             "path":  "West/Glass Bottle/cevid2.jpg"
+                                         },
+                                         {
+                                             "name":  "change",
+                                             "path":  "West/Glass Bottle/change.png"
+                                         },
+                                         {
+                                             "name":  "cola",
+                                             "path":  "West/Glass Bottle/cola.jpg"
+                                         },
+                                         {
+                                             "name":  "sevid",
+                                             "path":  "West/Glass Bottle/sevid.jpg"
                                          }
                                      ]
                        }
