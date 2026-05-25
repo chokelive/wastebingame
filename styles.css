@@ -377,12 +377,32 @@ h2 {
 
 @media (max-width: 900px) {
   .game-shell {
+    display: flex;
+    flex-direction: column;
     padding: 16px;
   }
 
   .topbar {
-    align-items: stretch;
-    flex-direction: column;
+    display: contents;
+  }
+
+  .topbar > div {
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .play-area {
+    order: 2;
+  }
+
+  .scoreboard {
+    order: 3;
+  }
+
+  .controls {
+    order: 4;
+    margin-top: 12px;
+    margin-bottom: 0;
   }
 
   .scoreboard {
@@ -456,6 +476,36 @@ h2 {
 }
 
 @media (pointer: coarse) and (orientation: landscape) {
+  .game-shell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topbar {
+    display: contents;
+  }
+
+  .topbar > div {
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .play-area {
+    order: 2;
+  }
+
+  .scoreboard {
+    order: 3;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .controls {
+    order: 4;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
   .bin-panel {
     padding: 12px;
   }
