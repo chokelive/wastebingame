@@ -108,10 +108,10 @@ h2 {
 
 .scoreboard {
   display: grid;
-  grid-template-columns: repeat(5, minmax(76px, 1fr));
+  grid-template-columns: repeat(4, minmax(86px, 1fr));
   gap: 10px;
-  width: min(100%, 500px);
-  min-width: 500px;
+  width: min(100%, 420px);
+  min-width: 420px;
 }
 
 .scoreboard div {
@@ -136,10 +136,6 @@ h2 {
 
 .scoreboard div:nth-child(4) {
   border-color: var(--blue);
-}
-
-.scoreboard div:nth-child(5) {
-  border-color: var(--red);
 }
 
 .scoreboard span {
@@ -439,7 +435,7 @@ h2 {
   .scoreboard {
     min-width: 0;
     width: 100%;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
   }
 

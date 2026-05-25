@@ -5,10 +5,7 @@ const state = {
   drag: null,
   score: 0,
   correct: 0,
-  wrong: 0,
-  timeLeft: 20,
-  timerId: null,
-  timedOut: false
+  wrong: 0
 };
 
 const els = {
@@ -16,7 +13,6 @@ const els = {
   correct: document.querySelector("#correct"),
   wrong: document.querySelector("#wrong"),
   remaining: document.querySelector("#remaining"),
-  timer: document.querySelector("#timer"),
   message: document.querySelector("#message"),
   mobileMessage: document.querySelector("#mobile-message"),
   roundSize: document.querySelector("#round-size"),
@@ -209,41 +205,11 @@ function updateScoreboard() {
   els.correct.textContent = state.correct;
   els.wrong.textContent = state.wrong;
   els.remaining.textContent = remaining;
-  els.timer.textContent = state.timeLeft;
 
   if (remaining === 0 && state.roundItems.length > 0) {
     setMessage(`จบรอบแล้ว คะแนนรวม ${state.score} คะแนน`, "correct");
-    stopTimer();
     stopMusic();
   }
-}
-
-function stopTimer() {
-  if (!state.timerId) return;
-  window.clearInterval(state.timerId);
-  state.timerId = null;
-}
-
-function startTimer() {
-  stopTimer();
-  state.timeLeft = 20;
-  state.timedOut = false;
-  updateScoreboard();
-
-  state.timerId = window.setInterval(() => {
-    state.timeLeft = Math.max(0, state.timeLeft - 1);
-    updateScoreboard();
-
-    if (state.timeLeft === 0) {
-      stopTimer();
-      state.timedOut = true;
-      state.selectedId = null;
-      cleanupPointerDrag();
-      renderWaste();
-      setMessage(`หมดเวลา! คะแนนรวม ${state.score} คะแนน`, "wrong");
-      stopMusic();
-    }
-  }, 1000);
 }
 
 function renderWaste() {
@@ -258,23 +224,18 @@ function renderWaste() {
     node.dataset.categoryId = item.categoryId;
     node.classList.toggle("sorted", item.sorted);
     node.classList.toggle("selected", state.selectedId === item.id);
-    node.draggable = !item.sorted && !state.timedOut;
-    node.disabled = state.timedOut;
+    node.draggable = !item.sorted;
     image.src = item.path;
     image.alt = item.name;
     label.textContent = item.name;
 
     node.addEventListener("click", () => {
-      if (item.sorted || state.timedOut) return;
+      if (item.sorted) return;
       state.selectedId = state.selectedId === item.id ? null : item.id;
       renderWaste();
     });
 
     node.addEventListener("dragstart", (event) => {
-      if (state.timedOut) {
-        event.preventDefault();
-        return;
-      }
       event.dataTransfer.setData("text/plain", item.id);
       event.dataTransfer.effectAllowed = "move";
       state.selectedId = item.id;
@@ -290,7 +251,7 @@ function renderWaste() {
 }
 
 function beginPointerDrag(event, item, node) {
-  if (item.sorted || state.timedOut || event.button > 0) return;
+  if (item.sorted || event.button > 0) return;
   startMusic();
   requestLandscapeMode();
 
@@ -380,8 +341,6 @@ function flashBin(bin, className) {
 }
 
 function sortedItemById(itemId, categoryId, binNode) {
-  if (state.timedOut) return;
-
   const item = state.roundItems.find((entry) => entry.id === itemId);
   if (!item || item.sorted) return;
 
@@ -419,8 +378,6 @@ function renderBins() {
     label.textContent = categoryDisplayName(category.name);
 
     node.addEventListener("click", () => {
-      if (state.timedOut) return;
-
       if (!state.selectedId) {
         setMessage("เลือกขยะก่อน แล้วค่อยเลือกถัง", "neutral");
         return;
@@ -429,7 +386,6 @@ function renderBins() {
     });
 
     node.addEventListener("dragover", (event) => {
-      if (state.timedOut) return;
       event.preventDefault();
       node.classList.add("drag-over");
     });
@@ -441,7 +397,6 @@ function renderBins() {
     node.addEventListener("drop", (event) => {
       event.preventDefault();
       node.classList.remove("drag-over");
-      if (state.timedOut) return;
       const itemId = event.dataTransfer.getData("text/plain");
       sortedItemById(itemId, category.id, node);
     });
@@ -451,7 +406,6 @@ function renderBins() {
 }
 
 function startNewGame() {
-  stopTimer();
   cleanupPointerDrag();
   if (audio.context) {
     startMusic();
@@ -461,12 +415,9 @@ function startNewGame() {
   state.score = 0;
   state.correct = 0;
   state.wrong = 0;
-  state.timeLeft = 20;
-  state.timedOut = false;
   renderBins();
   renderWaste();
   updateScoreboard();
-  startTimer();
   setMessage("ลากขยะไปใส่ถัง หรือแตะขยะแล้วแตะถังก็ได้");
 }
 
