@@ -409,10 +409,19 @@ h2 {
   }
 
   .bin-grid {
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(180px, 1fr);
-    grid-template-columns: none;
-    overflow-x: auto;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+    overflow-x: visible;
+  }
+
+  .bin-card {
+    grid-template-rows: minmax(92px, 15vw) auto;
+    min-height: 142px;
+    padding: 7px;
+  }
+
+  .bin-card span {
+    font-size: 13px;
   }
 }
 
@@ -446,6 +455,28 @@ h2 {
   }
 }
 
+@media (pointer: coarse) and (orientation: landscape) {
+  .bin-panel {
+    padding: 12px;
+  }
+
+  .bin-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+    overflow-x: visible;
+  }
+
+  .bin-card {
+    grid-template-rows: minmax(82px, 12vw) auto;
+    min-height: 128px;
+    padding: 6px;
+  }
+
+  .bin-card span {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 520px) {
   h1 {
     font-size: 28px;
@@ -466,7 +497,23 @@ h2 {
   .bin-grid {
     grid-auto-flow: row;
     grid-auto-columns: initial;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     overflow-x: visible;
+  }
+
+  .bin-grid {
+    gap: 5px;
+  }
+
+  .bin-card {
+    grid-template-rows: 62px auto;
+    min-height: 96px;
+    padding: 4px;
+  }
+
+  .bin-card span {
+    font-size: 10px;
+    white-space: normal;
+    line-height: 1.15;
   }
 }
