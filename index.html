@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เกมคัดแยกขยะ WasteBin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <h1>ภารกิจคัดแยกขยะ WasteBin</h1>
+        <p>ลากขยะให้ลงถังที่ถูกต้อง แล้วสะสมคะแนนกันเลย</p>
+      </div>
+      <section class="scoreboard" aria-label="คะแนน">
+        <div>
+          <span id="score">0</span>
+          <small>คะแนน</small>
+        </div>
+        <div>
+          <span id="correct">0</span>
+          <small>ถูกต้อง</small>
+        </div>
+        <div>
+          <span id="wrong">0</span>
+          <small>พลาด</small>
+        </div>
+        <div>
+          <span id="remaining">0</span>
+          <small>เหลือ</small>
+        </div>
+      </section>
+    </header>
+
+    <section class="controls" aria-label="ปุ่มควบคุมเกม">
+      <button id="new-game" type="button">เริ่มรอบใหม่</button>
+      <label>
+        จำนวนขยะ
+        <select id="round-size">
+          <option value="8">8</option>
+          <option value="12" selected>12</option>
+          <option value="16">16</option>
+          <option value="24">24</option>
+        </select>
+      </label>
+      <span id="message" role="status" aria-live="polite"></span>
+    </section>
+
+    <section class="play-area">
+      <section class="bin-panel" aria-labelledby="bin-title">
+        <h2 id="bin-title">เลือกถังให้ถูก</h2>
+        <div id="bin-list" class="bin-grid"></div>
+      </section>
+
+      <section class="waste-panel" aria-labelledby="waste-title">
+        <h2 id="waste-title">กองขยะรวม</h2>
+        <div id="waste-list" class="waste-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <template id="waste-template">
+    <button class="waste-card" type="button" draggable="true">
+      <img alt="">
+      <span></span>
+    </button>
+  </template>
+
+  <template id="bin-template">
+    <button class="bin-card" type="button">
+      <img alt="">
+      <span></span>
+    </button>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

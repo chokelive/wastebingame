@@ -1,0 +1,168 @@
+﻿{
+    "generatedAt":  "2026-05-25T09:06:01",
+    "categories":  [
+                       {
+                           "name":  "Opaque",
+                           "binImage":  "Bin/Opaque.jpg",
+                           "items":  [
+                                         {
+                                             "name":  "118aa8e4886bc3736ef6aa3957eeeecca19_3D_CP_Meiji_LactoseFree_830ml_Plain_NPK_700x730",
+                                             "path":  "West/Opaque/118aa8e4886bc3736ef6aa3957eeeecca19_3D_CP_Meiji_LactoseFree_830ml_Plain_NPK_700x730.png"
+                                         },
+                                         {
+                                             "name":  "11939478baa0d2f678ecc7926427f73c1ce_3D_CP_Meiji_LactoseFree_450ml_Plain_NPK_700x730",
+                                             "path":  "West/Opaque/11939478baa0d2f678ecc7926427f73c1ce_3D_CP_Meiji_LactoseFree_450ml_Plain_NPK_700x730.png"
+                                         },
+                                         {
+                                             "name":  "140ba95545cdd0a6bcabb470756fdd134e0_3D_CP_Meiji_LactoseFree_830ml_Dark_Chocolate_NPK_700x730",
+                                             "path":  "West/Opaque/140ba95545cdd0a6bcabb470756fdd134e0_3D_CP_Meiji_LactoseFree_830ml_Dark_Chocolate_NPK_700x730.png"
+                                         },
+                                         {
+                                             "name":  "193ec6742cf56917dd79e7325cc4231c62b_pdmeijihighprotein28gwheybanana350ml",
+                                             "path":  "West/Opaque/193ec6742cf56917dd79e7325cc4231c62b_pdmeijihighprotein28gwheybanana350ml.png"
+                                         },
+                                         {
+                                             "name":  "2032e1a5e09418d15a458716736bed8d256_meiji_high_protein_packshot_2023_plain",
+                                             "path":  "West/Opaque/2032e1a5e09418d15a458716736bed8d256_meiji_high_protein_packshot_2023_plain.png"
+                                         },
+                                         {
+                                             "name":  "37dc838f5bc8ae5c537ce853042939b02b_3DMeijiPasteurized2000mlFresh700x730",
+                                             "path":  "West/Opaque/37dc838f5bc8ae5c537ce853042939b02b_3DMeijiPasteurized2000mlFresh700x730.png"
+                                         }
+                                     ]
+                       },
+                       {
+                           "name":  "Plastic",
+                           "binImage":  "Bin/Plastic.jpg",
+                           "items":  [
+                                         {
+                                             "name":  "8888196180414",
+                                             "path":  "West/Plastic/8888196180414.jpg"
+                                         },
+                                         {
+                                             "name":  "c5c9aca580192879bb227b00eff15fac",
+                                             "path":  "West/Plastic/c5c9aca580192879bb227b00eff15fac.jpeg"
+                                         },
+                                         {
+                                             "name":  "coco-350-e1659501926635",
+                                             "path":  "West/Plastic/coco-350-e1659501926635.png"
+                                         },
+                                         {
+                                             "name":  "Image - 2025-11-20T163346.596",
+                                             "path":  "West/Plastic/Image - 2025-11-20T163346.596.jpg"
+                                         },
+                                         {
+                                             "name":  "Image - 2025-11-20T163349.379",
+                                             "path":  "West/Plastic/Image - 2025-11-20T163349.379.jpg"
+                                         },
+                                         {
+                                             "name":  "Image - 2025-11-20T163351.708",
+                                             "path":  "West/Plastic/Image - 2025-11-20T163351.708.jpg"
+                                         }
+                                     ]
+                       },
+                       {
+                           "name":  "Water_Ice",
+                           "binImage":  "Bin/Water_Ice.jpg",
+                           "items":  [
+                                         {
+                                             "name":  "Ice ",
+                                             "path":  "West/Water_Ice/Ice .png"
+                                         },
+                                         {
+                                             "name":  "น้ำแข็ง",
+                                             "path":  "West/Water_Ice/น้ำแข็ง.jpg"
+                                         }
+                                     ]
+                       },
+                       {
+                           "name":  "Oganic West",
+                           "binImage":  "Bin/Oganic West.jpg",
+                           "items":  [
+
+                                     ]
+                       },
+                       {
+                           "name":  "Can",
+                           "binImage":  "Bin/Can.jpg",
+                           "items":  [
+                                         {
+                                             "name":  "425038-02-allonline-sm",
+                                             "path":  "West/Can/425038-02-allonline-sm.jpg"
+                                         },
+                                         {
+                                             "name":  "8850250000365_1-20250807100722-",
+                                             "path":  "West/Can/8850250000365_1-20250807100722-.webp"
+                                         },
+                                         {
+                                             "name":  "8850999016887_1",
+                                             "path":  "West/Can/8850999016887_1.jpg"
+                                         },
+                                         {
+                                             "name":  "8850999023175_1-20240710103508-",
+                                             "path":  "West/Can/8850999023175_1-20240710103508-.webp"
+                                         },
+                                         {
+                                             "name":  "Coffee berby",
+                                             "path":  "West/Can/Coffee berby.png"
+                                         }
+                                     ]
+                       },
+                       {
+                           "name":  "General West",
+                           "binImage":  "Bin/General West.jpg",
+                           "items":  [
+                                         {
+                                             "name":  "1f959ada876c4e3eaa87bd3631a83552",
+                                             "path":  "West/General West/1f959ada876c4e3eaa87bd3631a83552.jpg"
+                                         },
+                                         {
+                                             "name":  "2023090611172054679",
+                                             "path":  "West/General West/2023090611172054679.jpg"
+                                         },
+                                         {
+                                             "name":  "52647b2caf4354dc6038a46d137c04ae",
+                                             "path":  "West/General West/52647b2caf4354dc6038a46d137c04ae.jpg"
+                                         },
+                                         {
+                                             "name":  "a7fb7393-5357a582b8e3c53b5d066b887135ac3d-18bf055a",
+                                             "path":  "West/General West/a7fb7393-5357a582b8e3c53b5d066b887135ac3d-18bf055a.jpeg"
+                                         },
+                                         {
+                                             "name":  "Screenshot 2025-11-18 142240",
+                                             "path":  "West/General West/Screenshot 2025-11-18 142240.png"
+                                         }
+                                     ]
+                       },
+                       {
+                           "name":  "Glass Bottle",
+                           "binImage":  "Bin/Glass_Bottle.jpg",
+                           "items":  [
+                                         {
+                                             "name":  "289547 (1)",
+                                             "path":  "West/Glass Bottle/289547 (1).jpg"
+                                         },
+                                         {
+                                             "name":  "289547",
+                                             "path":  "West/Glass Bottle/289547.jpg"
+                                         },
+                                         {
+                                             "name":  "413454-02-allonline-sm-v5",
+                                             "path":  "West/Glass Bottle/413454-02-allonline-sm-v5.jpg"
+                                         },
+                                         {
+                                             "name":  "413465-02-allonline-sm-v5",
+                                             "path":  "West/Glass Bottle/413465-02-allonline-sm-v5.jpg"
+                                         },
+                                         {
+                                             "name":  "727800-02-allonline-sm",
+                                             "path":  "West/Glass Bottle/727800-02-allonline-sm.jpg"
+                                         },
+                                         {
+                                             "name":  "8d4decfe21ae01e8f4f5dc05b09084fd",
+                                             "path":  "West/Glass Bottle/8d4decfe21ae01e8f4f5dc05b09084fd.jpg"
+                                         }
+                                     ]
+                       }
+                   ]
+}
