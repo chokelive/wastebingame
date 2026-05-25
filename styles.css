@@ -414,12 +414,23 @@ h2 {
   }
 
   #mobile-message {
-    display: block;
+    display: inline-block;
     min-height: 20px;
-    margin: -6px 0 12px;
+    margin: 0 0 12px 10px;
     color: var(--muted);
     font-weight: 700;
-   }
+    vertical-align: baseline;
+  }
+
+  #waste-title {
+    display: inline-block;
+    margin-bottom: 12px;
+    vertical-align: baseline;
+  }
+
+  .waste-grid {
+    clear: both;
+  }
 
   .scoreboard {
     min-width: 0;
@@ -527,11 +538,22 @@ h2 {
   }
 
   #mobile-message {
-    display: block;
+    display: inline-block;
     min-height: 20px;
-    margin: -6px 0 12px;
+    margin: 0 0 12px 10px;
     color: var(--muted);
     font-weight: 700;
+    vertical-align: baseline;
+  }
+
+  #waste-title {
+    display: inline-block;
+    margin-bottom: 12px;
+    vertical-align: baseline;
+  }
+
+  .waste-grid {
+    clear: both;
   }
 
   .bin-panel {
