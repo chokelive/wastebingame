@@ -14,6 +14,7 @@ const els = {
   wrong: document.querySelector("#wrong"),
   remaining: document.querySelector("#remaining"),
   message: document.querySelector("#message"),
+  mobileMessage: document.querySelector("#mobile-message"),
   roundSize: document.querySelector("#round-size"),
   newGame: document.querySelector("#new-game"),
   wasteList: document.querySelector("#waste-list"),
@@ -183,15 +184,19 @@ async function requestLandscapeMode() {
 }
 
 function setMessage(text, type = "neutral") {
-  els.message.textContent = text;
-  els.message.dataset.type = type;
-  if (type === "correct") {
-    els.message.style.color = "var(--green-dark)";
-  } else if (type === "wrong") {
-    els.message.style.color = "var(--red)";
-  } else {
-    els.message.style.color = "var(--muted)";
-  }
+  const messageEls = [els.message, els.mobileMessage].filter(Boolean);
+  messageEls.forEach((messageEl) => {
+    messageEl.textContent = text;
+    messageEl.dataset.type = type;
+  });
+
+  const color =
+    type === "correct" ? "var(--green-dark)" :
+    type === "wrong" ? "var(--red)" :
+    "var(--muted)";
+  messageEls.forEach((messageEl) => {
+    messageEl.style.color = color;
+  });
 }
 
 function updateScoreboard() {

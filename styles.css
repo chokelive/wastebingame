@@ -192,6 +192,10 @@ h2 {
   font-weight: 700;
 }
 
+#mobile-message {
+  display: none;
+}
+
 .play-area {
   display: grid;
   grid-template-columns: 1fr;
@@ -405,6 +409,18 @@ h2 {
     margin-bottom: 0;
   }
 
+  #message {
+    display: none;
+  }
+
+  #mobile-message {
+    display: block;
+    min-height: 20px;
+    margin: -6px 0 12px;
+    color: var(--muted);
+    font-weight: 700;
+   }
+
   .scoreboard {
     min-width: 0;
     width: 100%;
@@ -504,6 +520,18 @@ h2 {
     order: 4;
     margin-top: 12px;
     margin-bottom: 0;
+  }
+
+  #message {
+    display: none;
+  }
+
+  #mobile-message {
+    display: block;
+    min-height: 20px;
+    margin: -6px 0 12px;
+    color: var(--muted);
+    font-weight: 700;
   }
 
   .bin-panel {
