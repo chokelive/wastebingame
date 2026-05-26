@@ -17,6 +17,9 @@ const els = {
   mobileMessage: document.querySelector("#mobile-message"),
   roundSize: document.querySelector("#round-size"),
   newGame: document.querySelector("#new-game"),
+  qrOpen: document.querySelector("#qr-open"),
+  qrModal: document.querySelector("#qr-modal"),
+  qrClose: document.querySelector("#qr-close"),
   wasteList: document.querySelector("#waste-list"),
   binList: document.querySelector("#bin-list"),
   wasteTemplate: document.querySelector("#waste-template"),
@@ -432,6 +435,18 @@ function validateDataset(dataset) {
   });
 }
 
+function openQrModal() {
+  if (!els.qrModal) return;
+  els.qrModal.hidden = false;
+  els.qrClose?.focus();
+}
+
+function closeQrModal() {
+  if (!els.qrModal || els.qrModal.hidden) return;
+  els.qrModal.hidden = true;
+  els.qrOpen?.focus();
+}
+
 async function boot() {
   try {
     state.dataset = await loadDataset();
@@ -452,6 +467,18 @@ els.roundSize.addEventListener("change", () => {
   startMusic();
   requestLandscapeMode();
   startNewGame();
+});
+els.qrOpen?.addEventListener("click", openQrModal);
+els.qrClose?.addEventListener("click", closeQrModal);
+els.qrModal?.addEventListener("click", (event) => {
+  if (event.target === els.qrModal) {
+    closeQrModal();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeQrModal();
+  }
 });
 document.addEventListener("pointermove", movePointerDrag);
 document.addEventListener("pointerup", endPointerDrag);

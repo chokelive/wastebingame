@@ -19,7 +19,13 @@
         <h1>ภารกิจคัดแยกขยะ WasteBin</h1>
         <p>ลากขยะให้ลงถังที่ถูกต้อง แล้วสะสมคะแนนกันเลย</p>
       </div>
-      <section class="scoreboard" aria-label="คะแนน">
+      <div class="topbar-tools">
+        <button id="qr-open" class="desktop-qr" type="button" aria-label="เปิด QR Code ขนาดใหญ่">
+          <img src="qr.png" alt="QR Code สำหรับเล่นบนมือถือ">
+          <span>สแกนเพื่อเล่นบนมือถือ</span>
+        </button>
+
+        <section class="scoreboard" aria-label="คะแนน">
         <div>
           <span id="score">0</span>
           <small>คะแนน</small>
@@ -36,7 +42,8 @@
           <span id="remaining">0</span>
           <small>เหลือ</small>
         </div>
-      </section>
+        </section>
+      </div>
     </header>
 
     <section class="controls" aria-label="ปุ่มควบคุมเกม">
@@ -80,6 +87,14 @@
       <span></span>
     </button>
   </template>
+
+  <div id="qr-modal" class="qr-modal" hidden>
+    <div class="qr-modal-card" role="dialog" aria-modal="true" aria-label="QR Code สำหรับเล่นบนมือถือ">
+      <button id="qr-close" class="qr-close" type="button" aria-label="ปิด">×</button>
+      <img src="qr.png" alt="QR Code สำหรับเล่นบนมือถือ">
+      <span>สแกนเพื่อเล่นบนมือถือ</span>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
