@@ -508,6 +508,7 @@ h2 {
 
   .play-area {
     order: 2;
+    gap: 2px;
   }
 
   .scoreboard {
@@ -564,11 +565,13 @@ h2 {
 
   .waste-panel {
     min-height: 44vh;
+    padding: 12px;
   }
 
   .bin-grid {
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 8px;
+    padding-bottom: 0;
     overflow-x: visible;
   }
 
@@ -584,32 +587,36 @@ h2 {
 }
 
 @media (max-width: 900px) and (orientation: portrait) {
-  .orientation-notice {
-    position: fixed;
-    inset: 0;
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 12px;
-    padding: 28px;
-    text-align: center;
-    color: #155e46;
-    background:
-      radial-gradient(circle at top left, rgba(245, 182, 66, 0.32), transparent 36%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(234, 248, 255, 0.98));
+  .game-shell {
+    padding: 12px;
   }
 
-  .orientation-notice strong {
-    font-size: 26px;
-    line-height: 1.1;
+  .play-area {
+    gap: 10px;
   }
 
-  .orientation-notice span {
-    max-width: 260px;
-    color: var(--muted);
-    font-weight: 700;
+  .bin-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .bin-card {
+    grid-template-rows: minmax(70px, 18vw) auto;
+    min-height: 116px;
+    padding: 6px;
+  }
+
+  .bin-card span {
+    white-space: normal;
+    line-height: 1.15;
+  }
+
+  .waste-panel {
+    min-height: 42vh;
+  }
+
+  .waste-grid {
+    grid-template-columns: repeat(auto-fill, minmax(82px, 1fr));
   }
 }
 
@@ -638,6 +645,7 @@ h2 {
 
   .play-area {
     order: 2;
+    gap: 0;
   }
 
   .scoreboard {
@@ -659,7 +667,7 @@ h2 {
   #mobile-message {
     display: inline-block;
     min-height: 20px;
-    margin: 0 0 12px 10px;
+    margin: 0 0 8px 10px;
     color: var(--muted);
     font-weight: 700;
     vertical-align: baseline;
@@ -667,7 +675,7 @@ h2 {
 
   #waste-title {
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     vertical-align: baseline;
   }
 
@@ -676,12 +684,18 @@ h2 {
   }
 
   .bin-panel {
-    padding: 12px;
+    padding: 8px 10px 2px;
+  }
+
+  .waste-panel {
+    margin-top: -4px;
+    padding: 8px 12px 12px;
   }
 
   .bin-grid {
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 8px;
+    padding-bottom: 0;
     overflow-x: visible;
   }
 
@@ -712,27 +726,37 @@ h2 {
     width: 100%;
   }
 
-  .waste-grid,
   .bin-grid {
     grid-auto-flow: row;
     grid-auto-columns: initial;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     overflow-x: visible;
   }
 
   .bin-grid {
-    gap: 5px;
+    gap: 6px;
   }
 
   .bin-card {
-    grid-template-rows: 62px auto;
-    min-height: 96px;
-    padding: 4px;
+    grid-template-rows: 76px auto;
+    min-height: 122px;
+    padding: 6px;
   }
 
   .bin-card span {
-    font-size: 10px;
+    font-size: 11px;
     white-space: normal;
     line-height: 1.15;
+  }
+
+  .waste-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .waste-card {
+    grid-template-rows: 72px;
+    min-height: 94px;
+    padding: 7px;
   }
 }

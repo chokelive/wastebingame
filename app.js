@@ -174,18 +174,6 @@ function playThrowEffect(isCorrect) {
   }
 }
 
-async function requestLandscapeMode() {
-  if (!window.matchMedia("(max-width: 900px)").matches || !screen.orientation?.lock) {
-    return;
-  }
-
-  try {
-    await screen.orientation.lock("landscape");
-  } catch (error) {
-    // Some mobile browsers only allow orientation lock in fullscreen or installed apps.
-  }
-}
-
 function setMessage(text, type = "neutral") {
   const messageEls = [els.message, els.mobileMessage].filter(Boolean);
   messageEls.forEach((messageEl) => {
@@ -256,7 +244,6 @@ function renderWaste() {
 function beginPointerDrag(event, item, node) {
   if (item.sorted || event.button > 0) return;
   startMusic();
-  requestLandscapeMode();
 
   const rect = node.getBoundingClientRect();
   const clone = node.cloneNode(true);
@@ -460,12 +447,10 @@ async function boot() {
 
 els.newGame.addEventListener("click", () => {
   startMusic();
-  requestLandscapeMode();
   startNewGame();
 });
 els.roundSize.addEventListener("change", () => {
   startMusic();
-  requestLandscapeMode();
   startNewGame();
 });
 els.qrOpen?.addEventListener("click", openQrModal);
